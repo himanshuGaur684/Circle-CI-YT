@@ -1,6 +1,12 @@
 # This config was automatically generated from your source code
 # Stacks detected: deps:java:.,tool:gradle:
 version: 2.1
+executors:
+  android:
+    docker:
+      - image: circleci/android:api-30
+    environment:
+      ANDROID_HOME: /opt/android/sdk
 jobs:
   test-java:
     docker:
